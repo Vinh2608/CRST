@@ -277,7 +277,7 @@ def main():
             if not i_parts[0] == 'fc':
                 new_params['.'.join(i_parts[0:])] = saved_state_dict[i]
     else:
-	loc = "cuda:" + str(args.gpu)
+	    loc = "cuda:" + str(args.gpu)
         saved_state_dict = torch.load(args.restore_from,map_location=loc)
         new_params = saved_state_dict.copy()
 
